@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnduraDry — Eco-Friendly DWR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================
+         HERO SECTION — VIDEO BACKGROUND
+         ============================================ -->
+    <section class="hero">
+
+        <!-- VIDEO: Replace "your-video.mp4" with your actual file path -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="rain_video.mp4" type="video/mp4">
+            <!-- If video fails to load, the overlay color will show instead -->
+        </video>
+
+        <!-- ==========================================
+             OVERLAY — Adjust opacity here
+             rgba(10, 25, 20, 0.65)
+               - Last number (0.65) = darkness
+               - 0.0 = fully transparent (video fully visible)
+               - 1.0 = fully opaque (video hidden)
+               - Start at 0.65 and tweak to taste
+             ========================================== -->
+        <div class="hero-overlay"></div>
+
+        <!-- Hero content sits on top of video + overlay -->
+        <div class="hero-content">
+            <p class="hero-tag">PFC-Free Water Repellency</p>
+            <h1 class="hero-title">EnduraDry</h1>
+            <p class="hero-subtitle">
+                <!-- EDIT THIS: Your product description -->
+                Next-generation durable water repellent technology that delivers higher performance than PFC-containing alterntatives.
+            </p>
+            <a href="#signup" class="hero-cta">Get Early Access &darr;</a>
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         PERFORMANCE COMPARISON SECTION
+         Edit the bar values and labels below
+         ============================================ -->
+    <section class="comparison">
+        <div class="comparison-inner">
+            <p class="comparison-tag">Independent Lab Results</p>
+            <h2>Wash Cycle Durability</h2>
+           
+            </p>
+
+            <div class="chart">
+
+                <!-- CHART LABELS (left side) -->
+                <div class="chart-row">
+                    <span class="chart-label">EnduraDry</span>
+                    <!-- Width = percentage. Change to match your data -->
+                    <div class="bar-track">
+                        <div class="bar bar-endura" style="width: 92%;">
+                            <span class="bar-value">92%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span class="chart-label">Leading C6 DWR</span>
+                    <div class="bar-track">
+                        <div class="bar bar-competitor" style="width: 61%;">
+                            <span class="bar-value">61%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span class="chart-label">Standard C0 DWR</span>
+                    <div class="bar-track">
+                        <div class="bar bar-standard" style="width: 34%;">
+                            <span class="bar-value">34%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="chart-footnote">After 50 wash cycles · Tested on nylon ripstop substrate</p>
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         EMAIL SIGNUP SECTION
+         ============================================ -->
+    <section class="signup" id="signup">
+        <div class="signup-inner">
+            <h2>Stay in the loop</h2>
+            <p>Be the first to know when EnduraDry launches.</p>
+            <form class="signup-form" onsubmit="handleSubmit(event)">
+                <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    required
+                    aria-label="Email address"
+                >
+                <button type="submit">Subscribe</button>
+            </form>
+          
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <p>&copy; 2026 EnduraDry. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple front-end only handler — shows a confirmation message
+        // Replace with Formspree / Mailchimp / backend if you want real collection
+        function handleSubmit(e) {
+            e.preventDefault();
+            const input = e.target.querySelector('input');
+            const email = input.value;
+            input.value = '';
+            alert('Thanks for subscribing, ' + email + '!');
+        }
+    </script>
+
+</body>
+</html>
